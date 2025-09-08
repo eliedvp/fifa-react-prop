@@ -1,0 +1,61 @@
+/* Container for alignment */
+.player-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Optional: centers the card vertically on the page */
+  padding: 20px;
+}
+
+/* Base styles for the player card */
+.player-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  border: none !important; /* Remove default bootstrap border */
+  
+}
+
+/* Hover effect */
+.player-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .player-card {
+    width: 100% !important; /* Full width on small screens */
+    margin: 10px 0 !important;
+  }
+}
+
+/* Animation for the card body */
+.card-body {
+  text-align: center;
+  
+}
+
+.card-title {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: bold;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.card-text {
+  color: #666;
+  line-height: 1.6;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Keyframe animation for a subtle fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
